@@ -1,0 +1,22 @@
+remove files from local and repo: git rm "File"
+
+remove folder from local and repo: git rm -r "Folder"
+
+if you want to remove a file just from the repo you have to
+	git rm --cached "File" 
+and then you have to use 
+	git add -u for your commits. 
+	
+The same but for folder: 	git rm -r --cached FOLDERNAME/
+				
+If you use git add . the "removed" file or folder is back on your index. 
+If it is not on the index anymore other contriubters doesnt have access to the file!!! 
+If you want that your collegues have access to the file than you can do instead:
+
+	git update-index --assume-unchanged path/to/file
+	to undo this: git update-index --no-assume-unchanged path/to/file
+	
+for folderds:
+	go into the folder you want to assume is unchanged
+		ls | xargs -l git update-index --assume-unchanged
+		to undo: ls | xargs -l git update-index --no-assume-unchanged

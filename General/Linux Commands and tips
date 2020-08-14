@@ -1,0 +1,35 @@
+General infos/tips about Linux Commands:
+------------------------------------------------------------------------
+
+you write in the front of the command "sudo" if you need only for a one command more permissions.
+
+------------------------------------------------------------------------
+
+to be root: sudo -i, to exit the root: exit
+
+------------------------------------------------------------------------
+
+to open .tar.gz files: tar -zxvf name.tar.gz
+
+------------------------------------------------------------------------
+
+to depackage a .deb file: sudo dpkg -i name.deb
+
+------------------------------------------------------------------------
+
+write in a protected file: sudo gedit "path"
+
+------------------------------------------------------------------------
+
+when you write mkdir -p "path" the not existing part of the path will be created too!
+
+------------------------------------------------------------------------
+
+to update something is like change files/folders/index/etc. 
+to upgrade something is to install newer versions of something
+
+------------------------------------------------------------------------
+
+if you want to install something you have to "sudo apt install...."
+
+------------------------------------------------------------------------

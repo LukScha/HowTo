@@ -1,0 +1,58 @@
+How to install JDK on Ubuntu!
+
+------------------------------------------------------------------------
+There are two Options:
+--------------------------------------
+First Option:
+
+ 1 .From the Oracle Website Download the Linux Compressed Archive Product (this ending with .tar.gz)
+ 
+ 2. new Folder where you want to save the JDK. (e.g. sudo mkdir -p /usr/lib/jvm)
+ 
+ 3. extract the files out of the downloaded .tar.gz. folder. The extracted folder is then probably in your "Downloads". tar -zxvf "name".tar.gz
+ 
+ 4. then move this extracted folder to your "new Folder from point 2" sudo mv "name" "where"
+ 
+ 5. Then you have to write the following in the terminal:
+ 	sudo update-alternatives --install /usr/bin/java java "Path where you saved the folder but it has to end with /bin/java + number for priority
+ 	sudo update-alternatives --install /usr/bin/javac javac "Path where you saved the folder but it has to end with /bin/javac  + number for priority
+ 	
+ 6. Check with java --version and javac --version if the installation was successfull
+ 
+ 7. sudo update-alternatives --config java (or javac) let change the default java or javac version
+ 
+ 8. when you have decided your default version you should write in the terminal 
+ 	sudo gedit /etc/environment
+    it will open the text editor. Below the Path="/usr/local......./local/games" you have to write JAVA_HOME="Path ..../jdk-version" The path is always the one of the default version. So you have to change it when you change the default.
+ 
+ 9. to execute the .txt you have to write: source /etc/environment
+ 
+--------------------------------------
+Second Option:
+
+ 1 .From the Oracle Website Download the Linux Debian Package Product (this ending with .deb)
+ 
+ 2. depackage the file out of the downloaded .deb folder. The extracted folder is then probably in your "Downloads". sudo dpkg -i "name".deb
+ 
+ 3. then your folder is already moved to /usr/lib/jvm/
+ 
+ 4. Then you have to write the following in the terminal:
+ 	sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/java-version/bin/java + number for priority
+ 	sudo update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/java-version/bin/javac   + number for priority
+ 	
+ 5. Check with java --version and javac --version if the installation was successfull
+ 
+ 6. sudo update-alternatives --config java (or javac) let change the default java or javac version
+ 
+ 7. when you have decided your default version you should write in the terminal 
+ 	sudo gedit /etc/environment
+    it will open the text editor. Below the Path="/usr/local......./local/games" you have to write JAVA_HOME="/usr/lib/jvm/jdk-version" The path is always the one of the default version. So you have to change it when you change the default.
+    
+ 8. to execute the .txt you have to write: source /etc/environment
+ 
+------------------------------------------------------------------------
+ 
+to open a secure file (that can only open the owner or the root) you have to write: sudo gedit "Path"
+ 
+if you want to install more than just one version of JDK you have to follow the steps above again! The sudo update-alternatives --install command will not overwrite the last installed version!
+

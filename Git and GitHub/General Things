@@ -1,0 +1,55 @@
+
+How to pull (from server to local) something:
+
+git pull
+
+-----------------------------------------------------------------------
+
+How to push (from local to server) something:
+
+1.what do you want to track: git add (files oder Folders) or git add . (all folders and files tracken)
+2.git commit -m "....." (this is the important one)
+3.git push
+
+-----------------------------------------------------------------------
+
+How to clone:
+
+git clone http.........
+
+-----------------------------------------------------------------------
+
+change branch:
+git checkout "branch name where you want to change"
+
+-----------------------------------------------------------------------
+
+To make a new repo:
+
+You can beginn from the github website and then clone the HTTPS with "git clone HTTPS" or you can init a folder:
+	git init (the folder which you want to make a repo)
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/LukScha/Probe_2.git
+	git push -u origin master
+
+-----------------------------------------------------------------------
+
+all the files and folders in .gitignore does only work when they are not already on the index (that means they are just allowed on the local machine) otherwise the folder or file would be tracked. When you want to ignore folder than it is "foldername/"
+
+-----------------------------------------------------------------------
+
+to reset the last commit: git reset HEAD
+
+-----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

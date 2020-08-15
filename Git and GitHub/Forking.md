@@ -3,14 +3,14 @@
 ### Fork use cases
 Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.
 
-#### Propose changes to someone else's project
+##### Propose changes to someone else's project
 For example, you can use forks to propose changes related to fixing a bug. Rather than logging an issue for a bug you've found, you can:
 
 - Fork the repository.
 - Make the fix.
 - Submit a pull request to the project owner.
 
-#### Use someone else's project as a starting point for your own idea.
+##### Use someone else's project as a starting point for your own idea.
 Open source software is based on the idea that by sharing code, we can make better, more reliable software.
 When creating your public repository from a fork of someone's project, make sure to include a license file that determines how you want your project to be shared with others.
 

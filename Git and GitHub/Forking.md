@@ -1,4 +1,4 @@
-# Forking
+# Forking Tutorial
 
 ### Fork use cases
 Most commonly, forks are used to either propose changes to someone else's project or to use someone else's project as a starting point for your own idea.

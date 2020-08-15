@@ -43,9 +43,13 @@ to reset the last commit: git reset HEAD
 
 -----------------------------------------------------------------------
 
+the ending ".md" views the file as a github formating
 
+-----------------------------------------------------------------------
 
+when you commit with "git commit" Git will add a push description like "update Filename"
 
+-----------------------------------------------------------------------
 
 
 

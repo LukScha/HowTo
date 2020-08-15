@@ -38,6 +38,8 @@ $ git remote -v
 > upstream  https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git (push)
 ```
 
+### Pull changes form parent repo
+- ```git pull [https link from parent repo]```
 
 
 For further information see [Fork a repo](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo)

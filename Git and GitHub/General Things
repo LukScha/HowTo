@@ -51,7 +51,7 @@ when you commit with "git commit" Git will add a push description like "update F
 
 -----------------------------------------------------------------------
 
-
+with git restore <filename> you can discard your changes! (you should not have commit before) with "." instead of the filename you can discard all your changes!
 
 
 

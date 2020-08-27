@@ -1,0 +1,57 @@
+This is why getting local IP adress is not possible without a hack:
+
+https://stackoverflow.com/questions/56543917/unable-to-fetch-ip-v4-address-from-rtcpeerconnection-chrome
+
+Chrome for local IP:
+It looks like local addresses are/will be anonymized using mDNS and default setting for the flag would be gradually set to Enabled for all Chrome users.
+
+For local development take a look here (set to Disable): chrome://flags/#enable-webrtc-hide-local-ips-with-mdns
+
+Mozilla for local IP:
+
+As of March 2020, there are two settings in about:config page:
+
+media.peerconnection.ice.obfuscate_host_addresses - when set to true, it changes local IP to {uuid}.local
+media.peerconnection.ice.obfuscate_host_addresses.whitelist - string with URLs, which are able to retrieve real IP, even with obfuscation enabled
+I've checked Firefox 73 and Developer Edition 74 (without any extension that could have changed the setting), first had obfuscate_host_addresses set to false, while dev edition had it enabled.
+
+
+
+27.08.2020
+---------------------------------------------------------------------------------------------------------------------
+function Javascript public IP:
+
+function get_IP(){
+  
+  fetch("https://api.ipify.org?format=json")
+    .then(results => results.json())
+    
+    .then(data => x = data) /*speichern der IP*/
+    .then(x => ip = Object.values(x))
+    .then(() => console.log(x))
+    .then(() => console.log(ip))
+    .then(() => console.log(ip[0]));
+    
+}
+
+
+function Javascript local IP: (for Mozilla and Chrome)
+
+function Test_IP(){
+window.RTCPeerConnection = window.RTCPeerConnection || window.mozRTCPeerConnection || window.webkitRTCPeerConnection;//compatibility for Firefox and chrome
+var pc = new RTCPeerConnection({iceServers:[]}), noop = function(){};      
+pc.createDataChannel('');//create a bogus data channel
+pc.createOffer(pc.setLocalDescription.bind(pc), noop);// create offer and set local description
+pc.onicecandidate = function(ice)
+{
+ if (ice && ice.candidate && ice.candidate.candidate)
+ {
+  var myIP = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/.exec(ice.candidate.candidate)[1];
+  console.log('my IP: ', myIP);   
+  pc.onicecandidate = noop;
+ }
+};
+}
+
+
+you can call the function in html when you "<script>Test_IP();</script>"!

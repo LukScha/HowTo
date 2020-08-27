@@ -1,0 +1,25 @@
+function sendEMail(){
+  
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var email  = document.getElementById("email").value;
+    
+  if(/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    Count_Email += 1;
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username : "spot.onepage@gmail.com",
+      Password : "spotbestapp69",
+      To : "spot.onepage@gmail.com",
+      From : email,
+      Subject : "Interesse Endprodukt",
+      Body : "<html> <h2>Someone wants information about the endproduct. </h2> <br></br> <p>Count_EMAIL: </p> </html>" + Count_Email,
+    }).then(
+      message => alert("Thank you for your interest!")
+    );
+  } else {
+    alert("You have entered an invalid email address!");
+  }
+
+
+
+it is important that we use just string or numbers for the variable in Body or Subject! There are not if else conditions allowed!

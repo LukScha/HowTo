@@ -1,7 +1,13 @@
 # HowTo
-This is a repo about many installation process and other things that are not that easy. It should help beginners and advanced developer.
+Hello this repository is about things that are not that easy and should help everybody who wants to begin in software development. I know that it is not easy to handle the many changes, forums and documentations of the whole SW-Development and that is the reason I created this repo.
 
 
-Please fork the repo and make a pull request so that I can check your Code or text.
+## How to name the Files of this repo:
 
-LukScha
+###for special programming languages:
+
+
+
+
+
+

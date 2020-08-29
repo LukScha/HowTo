@@ -10,11 +10,12 @@ Please describe the problem that you have/had in your texteditor or in .md forma
   
 ### for OS, GIT, GITHUB, IDEs,......
 Again please use the .txt or .md format and describe your problem at the beginning of your file. In these above cases you should use the following format:
-  **xxxxxxx_"OS_NAME".txt(or .md)**
-  **xxxxxxx_"GIT".txt(or .md)**
-  **xxxxxxx_"GITHUB".txt(or .md)**
-  **xxxxxxx_"IDE".txt(or .md)**
-  **xxxxxxx_"yyyyyyyyy".txt(or .md)**
+ - **xxxxxxx_"OS_NAME".txt(or .md)**
+ - **xxxxxxx_"GIT".txt(or .md)**
+ - **xxxxxxx_"GITHUB".txt(or .md)**
+ - **xxxxxxx_"IDE".txt(or .md)**
+ - **xxxxxxx_"yyyyyyyyy".txt(or .md)**
+
 In any case you can write me and ask for clarification!
 
 

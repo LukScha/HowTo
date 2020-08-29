@@ -1,5 +1,7 @@
 # HowTo
-Hello this repository is about things that are not that easy and should help everybody who wants to begin in software development. I know that it is not easy to handle the many changes, forums and documentations of the whole SW-Development and that is the reason I created this repo.
+Hello this repository is about things that are not that easy and should help everybody who wants to begin in software development. I know that it is not easy to handle the many changes, forums and documentations of the whole SW-Development and that is the reason I created this repo. 
+
+You can create every Folder you would like but the files should be named under the following rules. I created a folder structure but you do not have to obey these structure. But if you make a pull request I will include the files in the folder structure I made. 
 
 
 ## How to name the Files of this repo:
@@ -20,8 +22,10 @@ In any case you can write me and ask for clarification!
 
 
 ### General "things"
-Every topic which is not about a particular topic or problem should be considered as a "General thing". For example this could be the beginning of git or the basic commands of the documentation. But again "In any case you can write me and ask for clarification!"
+Every topic which is not about a particular topic or problem should be considered as a "General thing". For example this could be the beginning of git or the basic commands of the documentation. But again "In any case you can write me and ask for clarification!" 
 
+## "General"
+The folder General is for everything which is unclear to name or to include in a folder! When you make a pull request I will include and name it correctly!
 
 I am looking forward to many problem-solving files and much fun to learn something about SW-Development :)
   

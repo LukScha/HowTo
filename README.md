@@ -4,7 +4,26 @@ Hello this repository is about things that are not that easy and should help eve
 
 ## How to name the Files of this repo:
 
-###for special programming languages:
+### for programming languages:
+Please describe the problem that you have/had in your texteditor or in .md format at the beginning. The name of the file should be the problem itself! The following format is the one which should be used:
+  **xxxxxxx_language.txt (or .md)** eg. : problem_javascript.txt
+  
+### for OS, GIT, GITHUB, IDEs,......
+Again please use the .txt or .md format and describe your problem at the beginning of your file. In these above cases you should use the following format:
+  **xxxxxxx_"OS_NAME".txt(or .md)**
+  **xxxxxxx_"GIT".txt(or .md)**
+  **xxxxxxx_"GITHUB".txt(or .md)**
+  **xxxxxxx_"IDE".txt(or .md)**
+  **xxxxxxx_"yyyyyyyyy".txt(or .md)**
+In any case you can write me and ask for clarification!
+
+
+### General "things"
+Every topic which is not about a particular topic or problem should be considered as a "General thing". For example this could be the beginning of git or the basic commands of the documentation. But again "In any case you can write me and ask for clarification!"
+
+
+I am looking forward to many problem-solving files and much fun to learn something about SW-Development :)
+  
 
 
 

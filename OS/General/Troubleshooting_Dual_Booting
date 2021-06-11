@@ -1,0 +1,6 @@
+turn everywhere fast booting OFF (UEFI and Windows if used)
+
+if some Wifi Problems occur so write "sudo apt install --fix-missing" in the terminal 
+
+in Windows can occur bluescreen and freezing because there are missing some updates and drivers, you can get the wright drivers with drivereasy.com
+

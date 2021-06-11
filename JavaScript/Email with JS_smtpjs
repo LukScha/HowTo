@@ -1,0 +1,7 @@
+EMail API for JavaScript:
+
+
+
+1. import <script src="https://smtpjs.com/v3/smtp.js"> </script> in your HTML
+2. visit https://smtpjs.com/
+3. copy that part which you need in your JS script!

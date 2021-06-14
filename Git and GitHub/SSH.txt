@@ -1,0 +1,16 @@
+Why do I need a SSH key?
+
+You can not have access to a private oder secured repository without a "Acces Token -HTTPS" or a "SSH-Key". A SSH key is only valuable on a single System. So if you want access
+with two Computers you need two SSH-Keys! 
+How to create a SSH key on Linux and how to implement it in GIT:
+
+There are different keys this tutorial describes the type ED25519:
+
+1.  check if there is already a SSH-Key on your Computer: ls -al ~/.ssh
+    you should have a SSH-key in following file-type: id_dsa.pub, id_ecdsa.pub, id_ed25519.pub, id_rsa.pub
+2.  if not create one: ssh-keygen -ed25519 -C "the email which is connected with your GIT account"
+    then you should just press enter on the displayed default place where the .pub file will be saved
+    then you have to use a passphrase (=password)
+3. In the saved .pub file you find your SSH-key you have to copy it (with the email!!) and use it as a SSH Key in your GitHUB/LAB account
+4.
+    

@@ -1,0 +1,31 @@
+Vim is a powerful text editor used in CLI (command line interface). 
+Linux uses a lot of configuration files, you'll often need to edit them and vim is a great tool to do so. Alternatives to vim are the command-line editor's nano and joe.
+
+Vim modes
+There are several other modes, I'll cover only the most widely used ones here. At the end of the tutorial, you will find some links to in-depth guides about VIM and explanations of advanced modes.
+
+Insert Mode
+The Insert mode lets you insert text in a document. The shortcut is: "i" (insert text where the cursor is) or "o" (insert text at the beginning of the following line).
+
+Visual Mode
+The visual mode permits the user to select the text as you would do with a mouse but using the keyboard instead of the mouse. Useful to copy several lines f text for example. The shortcut is: "V".
+
+Command Mode
+Let's now speak about the command mode, a command begins with the symbol ":".
+
+save: :w
+save and exit: :wq
+exit: :q
+force: ! (example :w! :q!) [:q! (=quit without saving the file)
+vertical split: open a document and then type :vsplit /path-to-document/document and this will open the specified document and split the screen so you can see both documents.
+copy: y
+copy a line: yy
+paste: p
+cut: d
+cut a line: dd
+
+
+Those are temporary files created by the vim editor. The .swp is created when a file is opened in the editor.
+The .swo is created if the file is edited and the .swp already exists. 
+Edit it a third time and you get a .swn, and so on. When vim is closed, those files should go away. If vim crashes or is killed, they may be left behind. They are safe to ignore 
+or you can remove it with rm filename.swo

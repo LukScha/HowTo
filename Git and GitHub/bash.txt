@@ -1,0 +1,24 @@
+What is bash?
+Bash is a type of shell (connection between human and OS) and therefore I can set some adjustmens like colour, alias etc. for my terminal.
+
+    Die bashrc ist eine Konfigurations-Datei für die Bash, welche bei jedem Öffnen eines Terminals[1] geladen wird. In ihr kann man Abkürzungen für Befehle (also ein alias) 
+    eintragen, man verändert hier das Aussehen des Prompts oder man kann zusätzliche Skripte einfügen, welche einem das Arbeiten mit der Shell erleichtern.
+    
+there are a global and a local .bashrc file. This is the file where you can adjust your settings.
+
+    Man hat grundsätzlich zwei bashrc-Dateien. Eine findet man unter /etc/bash.bashrc. Dies ist die globale bashrc, was bedeutet, dass Änderungen. die man in dieser vornimmt,
+    Auswirkungen auf die Bash von sämtlichen Benutzern des Systems haben.
+    Die zweite bashrc findet man versteckt im Homeverzeichnis als .bashrc. In dieser kann jeder Benutzer Änderungen nur für sich vornehmen und in dieser sollte man 
+    grundsätzlich seine Änderungen auch eintragen, außer man hat einen gewichtigen Grund, dass sie für alle Benutzer gelten sollen.
+    Die globale bash_profile befindet sich in /etc/profile und die des Benutzers unter ~/.bash_profile. Letztere existiert meist noch nicht und muss erst von Hand erstellt werden.
+    
+to check which shell is used type: echo $SHELL
+
+to change the shell use: ipa user-mod USERNAME --shell=/bin/bash (or tcsh,sh,csh......)
+
+https://wiki.ubuntuusers.de/Bash/Prompt/
+
+when you want to activate your bashrc you have to enter source ~/.bashrc or exec bash 
+(Elegant, but "does the same thing" is not entirely correct. source ~/.bashrc will preserve your entire shell environment (though likely modified by the sourcing of ~/.bashrc),
+whereas exec bash will only preserve your current shell's environment variables
+(any ad-hoc changes to the current shell in terms of shell variables, function, options are lost). Depending on your needs, one or the other approach may be preferred.)

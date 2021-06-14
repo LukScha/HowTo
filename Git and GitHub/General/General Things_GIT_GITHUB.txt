@@ -104,5 +104,8 @@ rmdir: The rmdir command will delete an empty directory. To delete a directory a
 
 mkdir: The mkdir command will allow you to create directories. Example: "mkdir music" will create a directory called "music".
 
+-----------------------------------------------------------------------
 
-
+to create a file and open it:
+$ cat > myfile.txt
+then you can write IN THE TERMINAL in the file, to end that and save your written content STRG+D

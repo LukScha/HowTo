@@ -1,0 +1,35 @@
+Remove directory from git and local
+
+  git rm -r one-of-the-directories // This deletes from filesystem
+  git commit . -m "Remove duplicated directory"
+  git push origin <your-git-branch> (typically 'master', but not always)
+  
+Remove directory from git but NOT local
+As mentioned in the comments, what you usually want to do is remove this directory from git but not delete it entirely from the filesystem (local)
+
+  git rm -r --cached myFolder
+  
+  
+  <filename>
+The name of a file (or multiple files) you want to remove. Naming the file you want to remove can be as simple as providing the filename / path to a single file. But you can also provide multiple filenames (delimited by spaces) or even a wildcard pattern (e.g. test.*).
+
+--cached
+Removes the file only from the Git repository, but not from the filesystem. By default, the git rm command deletes files both from the Git repository as well as the filesystem. Using the --cached flag, the actual file on disk will not be deleted.
+
+-r
+Recursively removes folders. When a path to a directory is specified, the -r flag allows Git to remove that folder including all its contents.
+
+--dry-run
+No files are actually removed. With this option (or its shorthand -n notation), you will only see an output of the files that Git would remove - but no files are actually deleted.
+
+
+To remove a file both from the Git repository and the filesystem, you can use git rm without any parameters (except for the file's name, of course):
+  $ git rm file1.txt
+  
+If you only want to remove the file from the repository, but keep it on the filesystem, you can add the --cached flag:
+  $ git rm file2.txt --cached
+
+When trying to delete multiple files in a directory or via a glob pattern, you might want to perform a "dry-run" first and see which files would be removed:
+  $ git rm css/* --dry-run
+  rm 'css/about.css'
+  rm 'css/general.css'

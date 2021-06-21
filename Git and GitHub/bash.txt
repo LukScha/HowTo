@@ -22,3 +22,31 @@ when you want to activate your bashrc you have to enter "source ~/.bashrc" or ex
 (Elegant, but "does the same thing" is not entirely correct. source ~/.bashrc will preserve your entire shell environment (though likely modified by the sourcing of ~/.bashrc),
 whereas exec bash will only preserve your current shell's environment variables
 (any ad-hoc changes to the current shell in terms of shell variables, function, options are lost). Depending on your needs, one or the other approach may be preferred.)
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Linux systems, such as Ubuntu or Fedora, usually come with a lot of libraries or applications, and OpenMPI is among them.
+If you use Ubuntu you probably won't need this because it includes the openmpi binaries folder in the environment variable 'PATH'.
+How I Know If I It's Included Or Not?
+
+It's quite simple, open a terminal and run:
+    mpicc
+    or mpirun or any other mpi command.
+If you obtain the message " ... : Command not found... " you have to add it to PATH.
+
+How Can I Add It?
+First open a terminal ( or use the one you opened before ) and run:
+    find /usr -name "mpirun"
+Here we are looking for the executable "mpirun" which we know it's part of the library. I obtain the following output:
+    /usr/lib64/openmpi/bin/mpirun
+Normally it is always under '/usr/lib64/openmpi/bin' if your system is 64bits or only "lib" if not.
+Now you only have to add it:
+    export PATH=/usr/lib64/openmpi/bin/:$PATH
+If you use the export command you have to use it for every terminal you open / restart. If you don't want to do this only add it to your ".bashrc" file.
+
+Open a terminal and run:
+cd ~
+gedit .bashrc
+Use gedit or other text editor you like.
+
+
